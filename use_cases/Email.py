@@ -1,6 +1,7 @@
 from os import getenv
 from dotenv import load_dotenv
 load_dotenv()
+from loguru import logger
 import smtplib
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
@@ -27,8 +28,6 @@ class Email:
         recipients: list = self.destiny
         server.starttls()
         server.login(self.sender_email, self.password)
-
         server.sendmail(self.sender_email, recipients, self.message.as_string())
-
-        print('E-mail enviado com sucesso!')
+        logger.info('E-mail enviado com sucesso!')
         server.quit()
