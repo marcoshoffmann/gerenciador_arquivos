@@ -50,9 +50,8 @@ class FilesManager:
             copy2(file, self.pathmanager.path_duo + "\\" + file.split("\\")[-1])
             remove(file)
             # self.emailsmanager.send_email(destiny=[self.responsaveis[self.responsavel]], usuario=self.responsavel, arquivo=self.pathmanager.path_move.format(clients[id_dominio], ano, mes, ano) + '\\' + file.split("\\")[-1])
-            self.emailsmanager.send_email(destiny=[self.responsaveis['TESTE']], usuario=self.responsavel, arquivo=self.pathmanager.path_move.format(clients[id_dominio], ano, mes, ano) + '\\' + file.split("\\")[-1])
-            # self.emailsmanager.send_email(destiny=['pessoal@boarocontabilidade.com.br'], usuario=self.responsavel, arquivo=self.pathmanager.path_move.format(clients[id_dominio], ano, mes, ano) + '\\' + file.split("\\")[-1])
-                
+            self.emailsmanager.send_email(destiny=[self.responsaveis['TESTE']], usuario=self.responsavel, arquivo=self.pathmanager.path_move.format(clients[id_dominio], ano, mes, ano) + '\\' + file.split("\\")[-1])  
+    
     def move_not_mapped(self, file: str) -> None:
         copy2(file, self.pathmanager.path_not_mapped)
         remove(file)
