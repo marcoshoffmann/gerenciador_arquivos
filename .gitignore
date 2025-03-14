@@ -1,0 +1,14 @@
+# Ignorar dados sensíveis
+*.env
+*.log
+*.tmp
+*.vscode/
+*.idea/
+*.json
+*.pyc
+*.pyo
+*.pyd
+venv/
+env/
+desktop.ini
+Thumbs.db

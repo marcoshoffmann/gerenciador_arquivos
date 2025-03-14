@@ -1,0 +1,5 @@
+consulta_empresa_by_cpf_cnpj: str = """SELECT id FROM empresas WHERE cpf_cnpj = '{}';"""
+consulta_empresa_by_im: str = """SELECT cpf_cnpj FROM empresas WHERE im = '{}';"""
+consulta_empresa_by_ie: str = """SELECT cpf_cnpj FROM empresas WHERE ie = '{}';"""
+consulta_empresa_by_base_cpf_cnpj: str = """SELECT cpf_cnpj FROM empresas WHERE cpf_cnpj LIKE('{}%');"""
+consulta_responsavel: str = """SELECT responsavel_fiscal FROM empresas WHERE id = {};"""
